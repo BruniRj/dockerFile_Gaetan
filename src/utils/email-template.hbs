@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .email_template{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .email_template .email_content {
+        border-radius: 10px;
+        text-align: center;
+        background-color: #d1cccc;
+        border: 1px solid #d1cccc;
+        width: 100%;
+        padding: 5%;
+        margin: 5% 10%;
+    }
+    .text_content {
+        font-size:14px;
+    }
+
+</style>
+<body>
+    <div class="email_template">
+        <div class="email_content">
+            <h1 style="font-size:20px;">
+                Hello <span style="color: rgb(38, 109, 38);">{{ USERNAME }}</span>,
+            </h1>
+            <p class="text_content">
+                We are from the Talentio team, and we want to check that the mail {{ EMAIL }} which want to create an account is really yours.
+                <br/>Below is the validation code that allows you to create your account.<br/>So first, copy this code :
+            </p>
+
+            <h2 class="form_code" style="color: rgb(38, 109, 38);letter-spacing:5px;font-size:20px;">
+                {{ RANDOM_CODE }}
+            </h2>
+
+            <p style="font-size: 17px;" class="form_thanking">
+                <span style="font-style: italic;">This validation code is valid before : </span><span style="font-weight: bold;">{{ EXPIRE_DATE }}</span>
+            </p>
+
+            <p class="text_content">
+                After that, click on the link below to continue your registration.
+            </p>
+
+            <a href="http://www.talentio.com/verification/email@email.com" class="text_content" style="font-style: italic;">
+                https://www.talentio.com/verification?email={{ EMAIL }}
+            </a>
+
+            <p class="text_content">
+                Thank you for trusting us...
+            </p>
+
+            <p class="text_content">
+                The entire team of <strong>TALENTIO</strong> wishes you to be satisfied with all our services that we offer to you.
+            </p>
+        </div>
+    </div>    
+</body>
+</html>

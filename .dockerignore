@@ -1,0 +1,18 @@
+# Ignorer les modules Node.js pour éviter de les recopier
+node_modules
+dist
+.git
+.env
+docker.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+
+# Autres fichiers temporaires
+.DS_Store
